@@ -83,7 +83,7 @@ export default {
             try {
                 var check = false
                 this.nhanviens.forEach(us => {
-                    if (us.MSNV === this.userLocal.MSNV && us.Password === this.userLocal.Password) check = true
+                    if (us.MSNV == this.userLocal.MSNV && us.Password == this.userLocal.Password) check = true
                 });
                 if (check) {
                     this.$cookies.set("MSNV", this.userLocal.MSNV);
@@ -102,12 +102,12 @@ export default {
         hideHeaderAndFooter() {
             this.$emit("isShowHeaderAndFooter", false);
         },
-        displaySuccess(message) {
+        displayError(message) {
             Swal.fire({
-                icon: 'success',
-                title: message,
-                showConfirmButton: false,
-                timer: 1000
+                title: 'Lỗi!',
+                text: message,
+                icon: 'error',
+                confirmButtonText: 'OK'
             })
         },
         delete_cookie() {

@@ -63,8 +63,10 @@
         </div>
     </div>
 
-    <div v-else>
-        <h1>Bạn không có quyền admin</h1>
+    <div v-else style="text-align: center;">
+        <h1
+            class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-4xl dark:text-white">
+            Bạn không có quyền admin</h1>
     </div>
 
     <div id="popup-modal" tabindex="-1" v-if="enableDeleteModal"
